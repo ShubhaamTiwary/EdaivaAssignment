@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Details</title>
+</head>
+<body>
+    <div>
+        <ul style="list-style-type:none">
+            <% for(let i of contact_list) {%>
+                <li id="items">
+                    <div id="content">
+                        <p>Profile Details</p>
+                        <p id="para">Name: <%= i.name %></p>
+                        <p id="para">Email-id:<%= i.email %></p>
+                        <p id="para">Phone Number:<%= i.phone %></p>
+                    </div>
+                    <div id="delete">
+                        <a href="/delete-contact/?id=<%= i._id %>">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                    </div>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+</html>
